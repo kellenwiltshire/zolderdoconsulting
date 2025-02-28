@@ -15,11 +15,13 @@ export default function Home() {
 					src='/forest.webp'
 					className='absolute inset-0 -z-10 size-full object-cover opacity-10'
 				/>
-				<div className='flex min-h-screen w-full flex-col items-center justify-center gap-3 p-4'>
-					<h1 className={`text-6xl ${tinosBold.className} antialiased`}>
+				<div className='flex min-h-screen w-full flex-col items-center justify-center gap-3 p-4 text-center'>
+					<h1
+						className={`text-center text-6xl ${tinosBold.className} antialiased`}
+					>
 						Zolderdo Consulting
 					</h1>
-					<p>Coming Soon.</p>
+					<p className='text-center'>Coming Soon.</p>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,7 @@
 import classNames from '@/utils/classNames'
 import { Tinos } from 'next/font/google'
 import Carousel from './components/Carousel/Carousel'
+import Title from '../Layout/Title'
 
 const tinosBold = Tinos({
 	weight: '700',
@@ -67,9 +68,7 @@ const Services = () => {
 	return (
 		<section id='services'>
 			<div className='mx-auto max-w-2xl px-4 py-6 sm:px-6 lg:max-w-7xl lg:px-8'>
-				<div className='mx-auto max-w-3xl text-center'>
-					<h2 className='text-3xl sm:text-4xl'>My Services</h2>
-				</div>
+				<Title title='My Services' />
 
 				<div className='mt-16 space-y-16'>
 					{services.map((service, serviceIdx) => (

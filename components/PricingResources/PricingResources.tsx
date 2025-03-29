@@ -1,3 +1,5 @@
+import Title from '../Layout/Title'
+
 const features = [
 	{
 		name: 'Manages Forest Tax Incentive Program',
@@ -22,7 +24,7 @@ const PricingResources = () => {
 		<div className='py-24 sm:py-32'>
 			<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 				<div className='mx-auto max-w-2xl lg:text-center'>
-					<p className='mt-2 text-3xl sm:text-4xl'>Pricing & Resources</p>
+					<Title title='Pricing & Resources' />
 
 					<div className='my-4'>
 						<p>

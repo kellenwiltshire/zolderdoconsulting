@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Title from '../Layout/Title'
 
 const About = () => {
 	return (
@@ -27,7 +28,7 @@ const About = () => {
 					<div className='mt-8 lg:mt-0'>
 						<div className='mx-auto flex h-full flex-col justify-center gap-8 text-base/7'>
 							<div className='py-4 text-center'>
-								<h2 className='text-3xl sm:text-4xl'>About Me</h2>
+								<Title title='About Me' />
 								<h3 className='mt-2 text-3xl/8 font-bold tracking-tight sm:text-4xl'>
 									Aaron Zolderdo
 								</h3>
@@ -35,13 +36,15 @@ const About = () => {
 							<p className='text-lg/7'>
 								I am a Managed Forest Plan Approver with the Ministry of Natural
 								Resources, dedicated to helping landowners navigate the Managed
-								Forest Tax Incentive Program (MFTIP). With a background in
-								forestry and land management, I work closely with property
-								owners to develop sustainable forest management plans that meet
-								program requirements while supporting long-term stewardship
-								goals. Whether you&apos;re looking to reduce property taxes or
-								enhance the health of your woodlot, I am here to guide you
-								through the process.
+								Forest Tax Incentive Program (MFTIP).
+							</p>
+							<p>
+								With a background in forestry and land management, I work
+								closely with property owners to develop sustainable forest
+								management plans that meet program requirements while supporting
+								long-term stewardship goals. Whether you&apos;re looking to
+								reduce property taxes or enhance the health of your woodlot, I
+								am here to guide you through the process.
 							</p>
 						</div>
 					</div>

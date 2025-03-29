@@ -8,7 +8,7 @@ function ContactForm() {
 	const [state, handleSubmit] = useForm('meoeylrd')
 
 	return (
-		<section id='contact' className='relative h-[1000px]'>
+		<section id='contact' className='relative'>
 			<div className='lg:absolute lg:inset-0 lg:left-1/2'>
 				<img
 					alt=''
@@ -38,7 +38,7 @@ function ContactForm() {
 						</p>
 
 						{state.succeeded ? (
-							<div className='my-10 flex w-full justify-center'>
+							<div className='my-10 flex h-[600px] w-full justify-center'>
 								<p>
 									Thank you for contacting, I will reach out to you shortly!
 								</p>

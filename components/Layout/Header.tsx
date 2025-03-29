@@ -14,6 +14,7 @@ const tinosBold = Tinos({
 
 const navigation = [
 	{ name: 'Services', href: '#services' },
+	{ name: 'Pricing & Resources', href: '#pricing' },
 	{ name: 'About Me', href: '#about' },
 	{ name: 'Contact', href: '#contact' },
 ]

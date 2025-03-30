@@ -93,7 +93,7 @@ const Header = () => {
 				/>
 				<div className='flex h-full w-full flex-col items-center justify-center gap-3 p-4 text-center'>
 					<h1
-						className={`text-center text-6xl ${tinosBold.className} antialiased`}
+						className={`text-center text-8xl ${tinosBold.className} antialiased`}
 					>
 						Zolderdo Consulting
 					</h1>

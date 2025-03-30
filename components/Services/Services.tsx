@@ -34,9 +34,7 @@ const services = [
 		],
 		extra:
 			"Whether you're enrolling for the first time or need support maintaining your status, I can simplify the process and help you maximize the benefits of responsible forest management.",
-		images: [
-			'https://tailwindui.com/plus-assets/img/ecommerce-images/product-service-07-detail-01.jpg',
-		],
+		images: ['/mftip.jpg'],
 	},
 	{
 		name: 'Other Services',

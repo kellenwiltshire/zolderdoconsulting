@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import Title from '../Layout/Title'
 
@@ -16,8 +17,8 @@ const About = () => {
 						<div className='relative mx-auto max-w-prose text-base lg:max-w-none'>
 							<figure>
 								<img
-									alt='Whitney leaning against a railing on a downtown street'
-									src='https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80'
+									alt='Photo of Aaron Zolderdo'
+									src='/Aaron-Zolderdo.jpg'
 									width={1184}
 									height={1376}
 									className='aspect-[12/7] w-full rounded-lg object-cover shadow-lg lg:aspect-auto'

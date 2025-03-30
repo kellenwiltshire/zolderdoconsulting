@@ -25,7 +25,9 @@ export default function RootLayout({
 				src='https://analytics.kellenwiltshire.com/script.js'
 				data-website-id='f215abee-555f-4afb-940d-730f851f8f97'
 			/>
-			<body className={`${tinos} antialiased`}>{children}</body>
+			<body className={`${tinos} min-h-screen bg-white text-black antialiased`}>
+				{children}
+			</body>
 		</html>
 	)
 }

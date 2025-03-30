@@ -48,10 +48,7 @@ function ContactForm() {
 							<form onSubmit={handleSubmit} className='mt-16'>
 								<div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
 									<div className='sm:col-span-2'>
-										<label
-											htmlFor='name'
-											className='block text-sm/6 font-semibold'
-										>
+										<label htmlFor='name' className='block text-sm/6'>
 											Name
 										</label>
 										<div className='mt-2.5'>
@@ -66,10 +63,7 @@ function ContactForm() {
 									</div>
 
 									<div className='sm:col-span-2'>
-										<label
-											htmlFor='email'
-											className='block text-sm/6 font-semibold'
-										>
+										<label htmlFor='email' className='block text-sm/6'>
 											Email
 										</label>
 										<div className='mt-2.5'>
@@ -86,7 +80,7 @@ function ContactForm() {
 
 									<div className='sm:col-span-2'>
 										<div className='flex justify-between text-sm/6'>
-											<label htmlFor='phone' className='block font-semibold'>
+											<label htmlFor='phone' className='block'>
 												Phone
 											</label>
 										</div>
@@ -103,10 +97,7 @@ function ContactForm() {
 										</div>
 									</div>
 									<div>
-										<label
-											htmlFor='property-size'
-											className='block text-sm/6 font-medium'
-										>
+										<label htmlFor='property-size' className='block text-sm/6'>
 											How big is your property?
 										</label>
 										<div className='mt-2 grid sm:col-span-2'>
@@ -128,10 +119,7 @@ function ContactForm() {
 										</div>
 									</div>
 									<div>
-										<label
-											htmlFor='service'
-											className='block text-sm/6 font-medium'
-										>
+										<label htmlFor='service' className='block text-sm/6'>
 											What can I help you with?
 										</label>
 										<div className='mt-2 grid sm:col-span-2'>
@@ -154,10 +142,7 @@ function ContactForm() {
 									</div>
 									<div className='sm:col-span-2'>
 										<div className='flex justify-between text-sm/6'>
-											<label
-												htmlFor='message'
-												className='block text-sm/6 font-semibold'
-											>
+											<label htmlFor='message' className='block text-sm/6'>
 												Anything else I should know?
 											</label>
 											<p id='message-description' className='text-gray-400'>
@@ -180,7 +165,7 @@ function ContactForm() {
 									<button
 										type='submit'
 										disabled={state.submitting}
-										className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+										className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
 									>
 										Send message
 									</button>

@@ -21,13 +21,13 @@ const features = [
 
 const PricingResources = () => {
 	return (
-		<div id='pricing' className='py-24 sm:py-32'>
+		<div id='pricing' className='py-12 sm:py-32'>
 			<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 				<div className='mx-auto max-w-2xl lg:text-center'>
 					<Title title='Pricing & Resources' />
 
 					<div className='my-4'>
-						<p>
+						<p className='text-center'>
 							Pricing varies based on property size, project scope, and specific
 							service needs. Please contact me directly for a quote.
 						</p>
@@ -36,17 +36,15 @@ const PricingResources = () => {
 					<div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
 						<dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3'>
 							{features.map((feature) => (
-								<div key={feature.name} className='flex flex-col items-center'>
-									<p className='flex text-base/7 font-semibold'>
-										{feature.name}
-									</p>
+								<div
+									key={feature.name}
+									className='flex flex-col items-center text-center'
+								>
+									<p className='flex text-base/7'>{feature.name}</p>
 									<dd className='mt-4 flex flex-auto flex-col text-base/7'>
 										<p className='flex-auto'>{feature.description}</p>
 										<p className='mt-6'>
-											<a
-												href={feature.href}
-												className='text-sm/6 font-semibold underline'
-											>
+											<a href={feature.href} className='text-sm/6 underline'>
 												Learn more
 											</a>
 										</p>

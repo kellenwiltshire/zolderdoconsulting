@@ -4,7 +4,8 @@ import { Bars3Icon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Tinos } from 'next/font/google'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 const tinosBold = Tinos({
 	weight: '700',
@@ -20,14 +21,24 @@ const navigation = [
 ]
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+	const [scrolled, setScrolled] = useState(false)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrolled(window.scrollY > window.innerHeight * 0.1)
+		}
+
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
 	return (
 		<>
 			<header className='absolute inset-x-0 top-0 z-50'>
 				<nav
 					aria-label='Global'
-					className='flex w-full items-center p-6 lg:justify-center lg:px-8'
+					className='fixed flex w-full items-center bg-[#111827] p-6 text-white md:relative lg:justify-center lg:px-8'
 				>
-					<div className='flex lg:hidden'>
+					<div className='flex w-full lg:hidden'>
 						<button
 							type='button'
 							onClick={() => setMobileMenuOpen(true)}
@@ -36,14 +47,18 @@ const Header = () => {
 							<span className='sr-only'>Open main menu</span>
 							<Bars3Icon aria-hidden='true' className='size-6' />
 						</button>
+						<motion.div
+							initial={{ opacity: 0, y: -20 }}
+							animate={{ opacity: scrolled ? 1 : 0, y: scrolled ? 0 : -20 }}
+							transition={{ duration: 0.3 }}
+							className={`grow text-center text-xl ${tinosBold.className} ${scrolled ? 'text-white' : 'text-transparent'}`}
+						>
+							Zolderdo Consulting
+						</motion.div>
 					</div>
 					<div className='hidden w-full justify-center lg:flex lg:gap-x-12'>
 						{navigation.map((item) => (
-							<a
-								key={item.name}
-								href={item.href}
-								className='text-sm/6 font-semibold text-white'
-							>
+							<a key={item.name} href={item.href} className='text-sm/6'>
 								{item.name}
 							</a>
 						))}
@@ -73,7 +88,8 @@ const Header = () => {
 										<a
 											key={item.name}
 											href={item.href}
-											className='-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800'
+											onClick={() => setMobileMenuOpen(false)}
+											className='-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-gray-800'
 										>
 											{item.name}
 										</a>
@@ -84,7 +100,7 @@ const Header = () => {
 					</DialogPanel>
 				</Dialog>
 			</header>
-			<div className='relative isolate h-96 overflow-hidden'>
+			<div className='relative top-[76px] isolate mb-[76px] h-96 overflow-hidden'>
 				<Image
 					alt=''
 					fill={true}
@@ -93,7 +109,7 @@ const Header = () => {
 				/>
 				<div className='flex h-full w-full flex-col items-center justify-center gap-3 p-4 text-center'>
 					<h1
-						className={`text-center text-8xl ${tinosBold.className} antialiased`}
+						className={`text-center text-7xl md:text-8xl ${tinosBold.className} antialiased`}
 					>
 						Zolderdo Consulting
 					</h1>

@@ -30,7 +30,7 @@ const About = () => {
 						<div className='mx-auto flex h-full flex-col justify-center gap-8 text-base/7'>
 							<div className='py-4 text-center'>
 								<Title title='About Me' />
-								<h3 className='mt-2 text-3xl/8 font-bold tracking-tight sm:text-4xl'>
+								<h3 className='mt-2 text-3xl/8 tracking-tight sm:text-4xl'>
 									Aaron Zolderdo
 								</h3>
 							</div>

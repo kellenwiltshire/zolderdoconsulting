@@ -82,7 +82,9 @@ const Services = () => {
 									'mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4',
 								)}
 							>
-								<h3 className={`text-2xl ${tinosBold.className}`}>
+								<h3
+									className={`text-center text-2xl md:text-left ${tinosBold.className}`}
+								>
 									{service.name}
 								</h3>
 								<p className='mt-2 text-sm'>{service.description}</p>

@@ -1,6 +1,6 @@
-import { Tinos } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 
-const tinosTitle = Tinos({
+const open_sans = Open_Sans({
 	weight: '700',
 	subsets: ['latin'],
 })
@@ -8,8 +8,8 @@ const tinosTitle = Tinos({
 const Title = ({ title }: { title: string }) => {
 	return (
 		<div className='mx-auto max-w-3xl text-center'>
-			<h2 className={`text-3xl sm:text-4xl ${tinosTitle.className}`}>
-				{title}
+			<h2 className={`text-3xl sm:text-4xl ${open_sans.className}`}>
+				{title.toLocaleUpperCase()}
 			</h2>
 		</div>
 	)

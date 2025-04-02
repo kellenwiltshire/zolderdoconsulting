@@ -1,12 +1,11 @@
 import classNames from '@/utils/classNames'
-import { Tinos } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import Carousel from './components/Carousel/Carousel'
 import Title from '../Layout/Title'
 
-const tinosBold = Tinos({
+const open_sans_bold = Open_Sans({
 	weight: '700',
 	subsets: ['latin'],
-	style: 'italic',
 })
 
 const services = [
@@ -83,7 +82,7 @@ const Services = () => {
 								)}
 							>
 								<h3
-									className={`text-center text-2xl md:text-left ${tinosBold.className}`}
+									className={`text-center text-2xl md:text-left ${open_sans_bold.className}`}
 								>
 									{service.name}
 								</h3>

@@ -2,15 +2,14 @@
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { Tinos } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
-const tinosBold = Tinos({
+const open_sans_bold = Open_Sans({
 	weight: '700',
 	subsets: ['latin'],
-	style: 'italic',
 })
 
 const navigation = [
@@ -51,7 +50,7 @@ const Header = () => {
 							initial={{ opacity: 0, y: -20 }}
 							animate={{ opacity: scrolled ? 1 : 0, y: scrolled ? 0 : -20 }}
 							transition={{ duration: 0.3 }}
-							className={`grow text-center text-xl ${tinosBold.className} ${scrolled ? 'text-white' : 'text-transparent'}`}
+							className={`grow text-center text-xl ${open_sans_bold.className} ${scrolled ? 'text-white' : 'text-transparent'}`}
 						>
 							Zolderdo Consulting
 						</motion.div>
@@ -100,7 +99,7 @@ const Header = () => {
 					</DialogPanel>
 				</Dialog>
 			</header>
-			<div className='relative top-[76px] isolate mb-[76px] h-96 overflow-hidden'>
+			<div className='relative top-[76px] isolate mb-[76px] h-96 overflow-hidden md:top-[72px]'>
 				<Image
 					alt=''
 					fill={true}
@@ -109,7 +108,7 @@ const Header = () => {
 				/>
 				<div className='flex h-full w-full flex-col items-center justify-center gap-3 p-4 text-center'>
 					<h1
-						className={`text-center text-7xl md:text-8xl ${tinosBold.className} antialiased`}
+						className={`text-center text-7xl md:text-8xl ${open_sans_bold.className} antialiased`}
 					>
 						Zolderdo Consulting
 					</h1>

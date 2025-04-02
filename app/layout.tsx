@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Tinos } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import './globals.css'
 import Script from 'next/script'
 
-const tinos = Tinos({
+const open_sans = Open_Sans({
 	weight: '400',
 	subsets: ['latin'],
 })
@@ -25,7 +25,9 @@ export default function RootLayout({
 				src='https://analytics.kellenwiltshire.com/script.js'
 				data-website-id='f215abee-555f-4afb-940d-730f851f8f97'
 			/>
-			<body className={`${tinos} min-h-screen bg-white text-black antialiased`}>
+			<body
+				className={`${open_sans} min-h-screen bg-white text-black antialiased`}
+			>
 				{children}
 			</body>
 		</html>

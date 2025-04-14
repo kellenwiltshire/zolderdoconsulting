@@ -1,15 +1,17 @@
 import type { Metadata } from 'next'
-import { Tinos } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script'
 
-const tinos = Tinos({
+const open_sans = Open_Sans({
 	weight: '400',
 	subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
-	title: 'Zolderdo Consulting',
-	description: 'Zolderdo Consulting',
+	title: 'Zoldero Consulting',
+	description:
+		'I am a Managed Forest Plan Approver with the Ministry of Natural Resources, dedicated to helping landowners navigate the Managed Forest Tax Incentive Program (MFTIP).',
 }
 
 export default function RootLayout({
@@ -19,7 +21,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${tinos} antialiased`}>{children}</body>
+			<Script
+				src='https://analytics.kellenwiltshire.com/script.js'
+				data-website-id='f215abee-555f-4afb-940d-730f851f8f97'
+			/>
+			<body
+				className={`${open_sans} min-h-screen bg-white text-black antialiased`}
+			>
+				{children}
+			</body>
 		</html>
 	)
 }

@@ -1,29 +1,19 @@
-import { Tinos } from 'next/font/google'
-
-const tinosBold = Tinos({
-	weight: '700',
-	subsets: ['latin'],
-	style: 'italic',
-})
+import About from '@/components/About/About'
+import ContactForm from '@/components/Contact/ContactForm'
+import Footer from '@/components/Layout/Footer'
+import Header from '@/components/Layout/Header'
+import PricingResources from '@/components/PricingResources/PricingResources'
+import Services from '@/components/Services/Services'
 
 export default function Home() {
 	return (
-		<div className='min-h-screen bg-gray-900'>
-			<div className='relative isolate min-h-screen overflow-hidden'>
-				<img
-					alt=''
-					src='/forest.webp'
-					className='absolute inset-0 -z-10 size-full object-cover opacity-10'
-				/>
-				<div className='flex min-h-screen w-full flex-col items-center justify-center gap-3 p-4 text-center'>
-					<h1
-						className={`text-center text-6xl ${tinosBold.className} antialiased`}
-					>
-						Zolderdo Consulting
-					</h1>
-					<p className='text-center'>Coming Soon.</p>
-				</div>
-			</div>
-		</div>
+		<>
+			<Header />
+			<Services />
+			<PricingResources />
+			<About />
+			<ContactForm />
+			<Footer />
+		</>
 	)
 }

@@ -101,7 +101,9 @@ const Header = () => {
 			</header>
 			<div className='relative top-[76px] isolate mb-[76px] h-96 overflow-hidden md:top-[72px]'>
 				<Image
-					alt=''
+					alt='Forest background'
+					loading='eager'
+					fetchPriority='high'
 					fill={true}
 					src='/forest.webp'
 					className='absolute inset-0 -z-10 size-full object-cover opacity-50'

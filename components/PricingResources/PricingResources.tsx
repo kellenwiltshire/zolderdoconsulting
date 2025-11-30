@@ -3,16 +3,19 @@ import Title from '../Layout/Title'
 const features = [
 	{
 		name: 'Manages Forest Tax Incentive Program',
-		description: 'Learn about eligibility, requirements, and benefits. ',
+		short_name: 'MFTIP',
+		description: 'Learn about eligibility, requirements, and benefits.',
 		href: 'https://www.ontario.ca/page/managed-forest-tax-incentive-program',
 	},
 	{
 		name: 'Forest Management Planning Tips',
+		short_name: 'Forest Management Planning',
 		description: 'Best practices for sustainable land use.',
 		href: 'https://www.ontario.ca/page/forest-management-planning',
 	},
 	{
 		name: 'Forestry Services',
+		short_name: 'Forestry Services',
 		description:
 			'Connect with additional support for tree planting, invasive species control, and more.',
 		href: 'https://www.rvca.ca/stewardship-grants/tree-planting',
@@ -42,12 +45,9 @@ const PricingResources = () => {
 								>
 									<p className='flex text-base/7'>{feature.name}</p>
 									<dd className='mt-4 flex flex-auto flex-col text-base/7'>
-										<p className='flex-auto'>{feature.description}</p>
-										<p className='mt-6'>
-											<a href={feature.href} className='text-sm/6 underline'>
-												Learn more
-											</a>
-										</p>
+										<a href={feature.href} className='flex-auto underline'>
+											{feature.description}
+										</a>
 									</dd>
 								</div>
 							))}

@@ -6,8 +6,9 @@ const About = () => {
 	return (
 		<section id='about' className='relative overflow-hidden'>
 			<Image
-				alt=''
+				alt='Forest background'
 				fill={true}
+				loading='lazy'
 				src='/forest.webp'
 				className='absolute inset-0 size-full object-cover opacity-25'
 			/>
@@ -18,7 +19,7 @@ const About = () => {
 							<figure>
 								<img
 									alt='Photo of Aaron Zolderdo'
-									src='/Aaron-Zolderdo.jpg'
+									src='/AaronZolderdo.webp'
 									width={1184}
 									height={1376}
 									className='aspect-[12/7] w-full rounded-lg object-cover shadow-lg lg:aspect-auto'

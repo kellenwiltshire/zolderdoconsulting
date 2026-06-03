@@ -9,7 +9,7 @@ const open_sans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-	title: 'Zoldero Consulting',
+	title: 'Zolderdo Consulting',
 	description:
 		'I am a Managed Forest Plan Approver with the Ministry of Natural Resources, dedicated to helping landowners navigate the Managed Forest Tax Incentive Program (MFTIP).',
 }

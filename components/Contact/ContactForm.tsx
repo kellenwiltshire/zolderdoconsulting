@@ -24,38 +24,48 @@ function ContactForm() {
 
 	const handleSubmitForm = async (form: FormData) => {
 		setButtonDisabled(true)
+
 		const formData: FormInformation = Object.fromEntries(
 			form.entries(),
 		) as FormInformation
+
 		const { name, email, phone, property_size, service, message } = formData
-		const token = await executeRecaptcha('form-mailer')
-		fetch(`https://form-mailer.kellenwiltshire.com/api/forms/${FORM_KEY}`, {
-			method: 'POST',
-			credentials: 'include',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				payload: {
-					name,
-					email,
-					phone,
-					property_size,
-					service,
-					message,
+
+		try {
+			const token = await executeRecaptcha('form-mailer')
+
+			const res = await fetch(
+				`https://form-mailer.kellenwiltshire.com/api/forms/${FORM_KEY}`,
+				{
+					method: 'POST',
+					credentials: 'include',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						payload: {
+							name,
+							email,
+							phone,
+							property_size,
+							service,
+							message,
+						},
+						token,
+					}),
 				},
-				token,
-			}),
-		})
-			.then((res) => {
-				if (!res.ok) {
-					throw new Error()
-				} else {
-					setFormStateCompleted(true)
-					setButtonDisabled(false)
-				}
-			})
-			.catch((err) => console.error(err))
+			)
+
+			if (!res.ok) {
+				throw new Error(`Form submission failed: ${res.status}`)
+			}
+
+			setFormStateCompleted(true)
+		} catch (err) {
+			console.error(err)
+		} finally {
+			setButtonDisabled(false)
+		}
 	}
 	return (
 		<section id='contact' className='relative lg:mx-40'>

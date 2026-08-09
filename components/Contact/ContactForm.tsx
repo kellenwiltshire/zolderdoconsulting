@@ -31,6 +31,7 @@ function ContactForm() {
 		const token = await executeRecaptcha('form-mailer')
 		fetch(`https://form-mailer.kellenwiltshire.com/api/forms/${FORM_KEY}`, {
 			method: 'POST',
+			credentials: 'include',
 			headers: {
 				'Content-Type': 'application/json',
 			},

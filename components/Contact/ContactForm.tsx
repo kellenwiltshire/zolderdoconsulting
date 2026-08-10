@@ -42,14 +42,14 @@ function ContactForm() {
 						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify({
-						payload: {
+						payload: JSON.stringify({
 							name,
 							email,
 							phone,
 							property_size,
 							service,
 							message,
-						},
+						}),
 						token,
 					}),
 				},

@@ -30,7 +30,6 @@ function ContactForm() {
 		) as FormInformation
 
 		const { name, email, phone, property_size, service, message } = formData
-
 		try {
 			const token = await executeRecaptcha('form-mailer')
 
@@ -42,14 +41,14 @@ function ContactForm() {
 						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify({
-						payload: JSON.stringify({
+						payload: {
 							name,
 							email,
 							phone,
 							property_size,
 							service,
 							message,
-						}),
+						},
 						token,
 					}),
 				},

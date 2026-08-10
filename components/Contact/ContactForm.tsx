@@ -31,7 +31,7 @@ function ContactForm() {
 
 		const { name, email, phone, property_size, service, message } = formData
 		try {
-			const token = await executeRecaptcha('form-mailer')
+			const token = await executeRecaptcha('form_submission')
 
 			const res = await fetch(
 				`https://form-mailer.kellenwiltshire.com/api/forms/${FORM_KEY}`,

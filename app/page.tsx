@@ -8,7 +8,10 @@ import { ReCaptchaProvider } from 'next-recaptcha-v3'
 
 export default function Home() {
 	return (
-		<ReCaptchaProvider reCaptchaKey='6Ld0rXstAAAAAF7AC78t9fF61-_uKgCeMkcIRfyd'>
+		<ReCaptchaProvider
+			useEnterprise
+			reCaptchaKey='6Ld0rXstAAAAAF7AC78t9fF61-_uKgCeMkcIRfyd'
+		>
 			<Header />
 			<Services />
 			<PricingResources />

@@ -153,6 +153,24 @@ function ContactForm() {
 											/>
 										</div>
 									</div>
+									<div className='sm:col-span-2'>
+										<div className='flex justify-between text-sm/6'>
+											<label htmlFor='address' className='block'>
+												Address/Role Number
+											</label>
+										</div>
+										<div className='mt-2.5'>
+											<input
+												id='address'
+												name='address'
+												type='address'
+												required
+												autoComplete='address'
+												aria-describedby='address'
+												className='block w-full rounded-md bg-white px-3.5 py-2 text-base text-black outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600'
+											/>
+										</div>
+									</div>
 									<div>
 										<label htmlFor='property_size' className='block text-sm/6'>
 											How big is your property?

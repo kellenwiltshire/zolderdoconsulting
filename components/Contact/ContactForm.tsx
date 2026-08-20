@@ -12,6 +12,7 @@ type FormInformation = {
 	property_size: string
 	service: string
 	message: string
+	address: string
 }
 
 const FORM_KEY = 'lmD5Zp'
@@ -29,7 +30,8 @@ function ContactForm() {
 			form.entries(),
 		) as FormInformation
 
-		const { name, email, phone, property_size, service, message } = formData
+		const { name, email, phone, property_size, service, message, address } =
+			formData
 		try {
 			const token = await executeRecaptcha('form_submission')
 
@@ -48,6 +50,7 @@ function ContactForm() {
 							property_size,
 							service,
 							message,
+							address,
 						},
 						token,
 					}),

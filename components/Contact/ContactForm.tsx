@@ -14,7 +14,7 @@ type FormInformation = {
 	message: string
 }
 
-const FORM_KEY = 'E6bRua'
+const FORM_KEY = 'lmD5Zp'
 
 function ContactForm() {
 	const [formStateCompleted, setFormStateCompleted] = useState(false)
